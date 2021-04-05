@@ -1,0 +1,10 @@
+version: '2.0'
+services:
+    redis-server:
+        image: 'redis'
+    flask-app:
+        build: .
+        ports:
+            - "3165:5000"
+        restart: always
+        
