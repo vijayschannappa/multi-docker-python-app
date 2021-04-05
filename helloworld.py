@@ -16,7 +16,7 @@ def check_for_status():
 @app.route('/check/', methods=['GET'])
 def check_flask():
     total_visits=fetch_and_update_redis_table()
-    return f"number of visits:{total_visits}"
+    return f"number of visits = {total_visits}"
 
 def fetch_and_update_redis_table():
     total_visits=r.get('visits')
