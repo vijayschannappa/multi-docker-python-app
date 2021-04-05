@@ -1,0 +1,6 @@
+FROM python:3.8-slim-buster
+
+WORKDIR /usr/test
+COPY ./requirements.txt /usr/test
+COPY ./test ./
+CMD ["python", "-m", "unittest","test_simple.py"]
